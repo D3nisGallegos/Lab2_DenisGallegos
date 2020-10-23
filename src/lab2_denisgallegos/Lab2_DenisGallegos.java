@@ -379,6 +379,82 @@ public class Lab2_DenisGallegos {
                     }//Fin del for que recorre la lista de casos.
                     break;
                     }//Fin del caso 7.
+                case 8:
+                    {
+                    System.out.println(" LISTAR RESUELTOS: ");
+                    System.out.println("Homicidios: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos objeto = (Casos) casos.get(c);
+                        String estado = objeto.getEstado();
+                        if (estado.equals("Resuelto")){
+                            String n = objeto.getTipo();
+                            if (n.equals("Homicidio")){
+                                System.out.println(objeto);
+                            }//Fin del if que valida el tipo.
+                        }
+                    }//Fin del for que recorre
+                    System.out.println("Secuestros: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos objeto = (Casos) casos.get(c);
+                        String estado = objeto.getEstado();
+                        if (estado.equals("Resuelto")){
+                            String n = objeto.getTipo();
+                            if (n.equals("Secuestro")){
+                                System.out.println(objeto);
+                            }//Fin del if que valida el tipo.
+                        }
+                    }//Fin del for que recorre
+                    System.out.println("Robos: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos objeto = (Casos) casos.get(c);
+                        String estado = objeto.getEstado();
+                        if (estado.equals("Resuelto")){
+                            String n = objeto.getTipo();
+                            if (n.equals("Robo")){
+                                System.out.println(objeto);
+                            }//Fin del if que valida el tipo.
+                        }
+                    }//Fin del for que recorre
+                    break;
+                    }//Fin del caso 8.
+                case 9:
+                    {
+                    System.out.println("LISTAR EN PROCESO: ");
+                    System.out.println("Homicidios: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos objeto = (Casos) casos.get(c);
+                        String estado = objeto.getEstado();
+                        if (estado.equals("En proceso")){
+                            String n = objeto.getTipo();
+                            if (n.equals("Homicidio")){
+                                System.out.println(objeto);
+                            }//Fin del if que valida el tipo.
+                        }
+                    }//Fin del for que recorre
+                    System.out.println("Secuestros: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos objeto = (Casos) casos.get(c);
+                        String estado = objeto.getEstado();
+                        if (estado.equals("En proceso")){
+                            String n = objeto.getTipo();
+                            if (n.equals("Secuestro")){
+                                System.out.println(objeto);
+                            }//Fin del if que valida el tipo.
+                        }
+                    }//Fin del for que recorre
+                    System.out.println("Robos: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos objeto = (Casos) casos.get(c);
+                        String estado = objeto.getEstado();
+                        if (estado.equals("En proceso")){
+                            String n = objeto.getTipo();
+                            if (n.equals("Robo")){
+                                System.out.println(objeto);
+                            }//Fin del if que valida el tipo.
+                        }
+                    }//Fin del for que recorre
+                    break;
+                    }//Fin del caso 9.
             }//Fin del switch que valida la opcion.
         }//Fin del while que reinicia el programa.
         

@@ -58,6 +58,10 @@ public class Casos {
         }//Fin del if que valida el tipo de estado.
     }//Fin del metodo SET ESTADO.
     
+    public String getEstado(){
+        return estado;
+    }//Fin del metodo SET ESTADO.
+    
     public String getTipo(){
         return tipo;
     }//Fin del metodo GET TIPO.
