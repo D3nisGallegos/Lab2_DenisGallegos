@@ -63,7 +63,7 @@ public class Detectives {
     
     public String getNombre(){
         return nombre;
-    }//Fin del metodo SET NOMBRE.
+    }//Fin del metodo GET NOMBRE.
     
     //METODOS DE ADMINISTRACION: 
     public String toString(){

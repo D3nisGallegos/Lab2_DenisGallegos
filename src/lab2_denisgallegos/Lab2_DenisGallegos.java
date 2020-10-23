@@ -255,7 +255,7 @@ public class Lab2_DenisGallegos {
                     Detectives asignado = (Detectives) detectives.get(indice);
                     String detective = asignado.getNombre();
                     int n3 = 0;
-                    while (n3 != 1 && n3 != 2 && n3 != 3){
+                    while (n3 != 1 && n3 != 2){
                         System.out.println("1) En proceso");
                         System.out.println("2) Resuelto");
                         System.out.println("Ingrese el estado de caso:");
@@ -272,6 +272,94 @@ public class Lab2_DenisGallegos {
                     asignado.getCasos().add(caso);
                     break;
                     }//Fin del caso 5.
+                case 6: 
+                    {
+                    System.out.println(" MODIFICAR CASOS: ");
+                    System.out.println("Lista de casos: ");
+                    imprimirlista(casos);
+                    int indice = 0;
+                    boolean v2 = false;
+                    while (v2 == false){
+                        System.out.println("Ingrese el indice del caso a modificar: ");
+                        indice = lectura.nextInt();
+                        if (indice >= 0 && indice < casos.size()){
+                            v2 = true;
+                        }else{
+                            System.out.println("Indice no valido.");
+                        }//Fin del if que valida la entrada.
+                    }//Fin del while que reinicia la entrada.
+                    Casos caso = (Casos) casos.get(indice);
+                    int n2 = 0;
+                    while (n2 != 1 && n2 != 2 && n2 != 3 && n2 != 4 && n2 != 5){
+                        System.out.println("1) Modificar lugar.");
+                        System.out.println("2) Modificar descripcion.");
+                        System.out.println("3) Modificar tipo.");
+                        System.out.println("4) Modificar el detective asignado.");
+                        System.out.println("5) Modificar el estado.");
+                        System.out.println("Ingrese la opcion a modificar:");
+                        n2 = lectura.nextInt();
+                    }//Fin del while que reinicia la entrada.
+                    if (n2 == 1){
+                        System.out.println("Ingrese el lugar del caso: ");
+                        String lugar = lectura.next();
+                        caso.setLugar(lugar);
+                    }else if (n2 == 2){
+                        System.out.println("Ingrese la descripcion del caso: ");
+                        String descripcion = lectura.next();
+                        caso.setDescripcion(descripcion);
+                    }else if (n2 == 3){
+                        int n3 = 0;
+                        while (n3 != 1 && n3 != 2 && n3 != 3){
+                            System.out.println("1) Homicidio");
+                            System.out.println("2) Secuestro");
+                            System.out.println("3) Robo");
+                            System.out.println("Ingrese el tipo de caso:");
+                            n3 = lectura.nextInt();
+                        }//Fin del while que reinicia la entrada.
+                        caso.setTipo(n3);
+                    }else if (n2 == 4){
+                        System.out.println("Lista de detectives para asignar al caso: ");
+                        imprimirlista(detectives);
+                        int indice2 = 0;
+                        boolean v3 = false;
+                        while (v3 == false){
+                            System.out.println("Ingrese el indice del detective a asignar: ");
+                            indice2 = lectura.nextInt();
+                            if (indice2 >= 0 && indice2 < detectives.size()){
+                                v3 = true;
+                            }else{
+                                System.out.println("Indice no valido.");
+                            }//Fin del if que valida la entrada.
+                        }//Fin del while que reinicia la entrada.
+                        Detectives asignado = (Detectives) detectives.get(indice2);
+                        String n = asignado.getNombre();
+                        caso.setDetective(n);
+                    }else if (n2 == 5){
+                        int n3 = 0;
+                        while (n3 != 1 && n3 != 2 && n3 != 3){
+                            System.out.println("1) En proceso");
+                            System.out.println("2) Resuelto");
+                            System.out.println("Ingrese el estado de caso:");
+                            n3 = lectura.nextInt();
+                        }//Fin del while que reinicia la entrada.
+                        if (n3 == 1){
+                            caso.setEstado(n3);
+                        }else if (n3 == 2){
+                            caso.setEstado(n3);
+                        }//Fin del if que valida el estado de caso.
+                    }//Fin del if que valida la opcion a modificar.
+                    break;
+                    }//Fin del caso 6.
+                case 7:
+                    {
+                    System.out.println(" LISTAR CASOS: ");
+                    System.out.println("Homicidios: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos caso = (Casos) casos.get(c);
+                        
+                    }
+                    break;
+                    }//Fin del caso 7.
             }//Fin del switch que valida la opcion.
         }//Fin del while que reinicia el programa.
         
