@@ -356,8 +356,27 @@ public class Lab2_DenisGallegos {
                     System.out.println("Homicidios: ");
                     for (int c = 0; c < casos.size();c++){
                         Casos caso = (Casos) casos.get(c);
-                        
-                    }
+                        String n = caso.getTipo();
+                        if (n.equals("Homicidio")){
+                            System.out.println(caso);
+                        }//Fin del if que valida el tipo.
+                    }//Fin del for que recorre la lista de casos.
+                    System.out.println("Secuestros: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos caso = (Casos) casos.get(c);
+                        String n = caso.getTipo();
+                        if (n.equals("Secuestro")){
+                            System.out.println(caso);
+                        }//Fin del if que valida el tipo.
+                    }//Fin del for que recorre la lista de casos.
+                    System.out.println("Robos: ");
+                    for (int c = 0; c < casos.size();c++){
+                        Casos caso = (Casos) casos.get(c);
+                        String n = caso.getTipo();
+                        if (n.equals("Robo")){
+                            System.out.println(caso);
+                        }//Fin del if que valida el tipo.
+                    }//Fin del for que recorre la lista de casos.
                     break;
                     }//Fin del caso 7.
             }//Fin del switch que valida la opcion.
