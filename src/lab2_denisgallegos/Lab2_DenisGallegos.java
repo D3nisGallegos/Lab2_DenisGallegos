@@ -102,17 +102,34 @@ public class Lab2_DenisGallegos {
                         int lvl = detectivealto.getNivel();
                         if (detectivemayor == lvl && contar < 1){
                             contar = 1;
-                            ArrayList nuevo = .getCasos();
+                            ArrayList nuevo = detectiveborrar.getCasos();
                             for (int j = 0; j < nuevo.size();j++){
                                 Casos objeto2 = (Casos) nuevo.get(j);
                                 String n = objeto2.getTipo();
-                                if (n == "Homicidio"){
-                                    ArrayList nuevo2 = objeto.getCasos();
-                                    nuevo2.add(objeto2);
+                                if (n.equals("Homicidio") == true){
+                                    detectivealto.getCasos().add(objeto2);
                                 }//Fin del if que valida el tipo de caso.
                             }//Fin del for que recorre el 
                         }//Fin del if que valida el nivel del detective.
-                    }
+                    }//Fin del for que recorr la lista de deteectives.
+                    int detectivemenor = Collections.min(niveles);
+                    int contar2 = 0;
+                    for (int c = 0; c < detectives.size();c++){
+                        Detectives detectivemenos = (Detectives) detectives.get(c);
+                        int lvl = detectivemenos.getNivel();
+                        if (detectivemenor == lvl && contar2 < 1){
+                            contar2 = 1;
+                            ArrayList nuevo = detectiveborrar.getCasos();
+                            for (int j = 0; j < nuevo.size();j++){
+                                Casos caso = (Casos) nuevo.get(j);
+                                String n = caso.getTipo();
+                                if (n.equals("Robo")){
+                                    detectivemenos.getCasos().add(caso);
+                                }//Fin del if que valida el tipo de caso.
+                            }//Fin del for que recorre los casos del detective a borrar.
+                        }//Fin del if que valida el nivel del detective.
+                    }//Fin del for que recorre la lista de detectives.
+                    
                     break;
                     }//Fin del caso 2.
             }//Fin del switch que valida la opcion.
