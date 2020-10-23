@@ -55,11 +55,15 @@ public class Detectives {
     
     public int getNivel(){
         return nivel;
-    }//Fin del metodo SET NIVEL.
+    }//Fin del metodo GET NIVEL.
     
     public ArrayList getCasos(){
         return casos;
-    }//Fin del metodo SET CASO.
+    }//Fin del metodo GET CASO.
+    
+    public String getNombre(){
+        return nombre;
+    }//Fin del metodo SET NOMBRE.
     
     //METODOS DE ADMINISTRACION: 
     public String toString(){

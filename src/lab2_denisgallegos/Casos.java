@@ -11,7 +11,7 @@ public class Casos {
     private String lugar; 
     private String descripcion; 
     private String tipo;
-    private Object detectives; 
+    private String detectives; 
     private String estado;
     
     //CONSTRUCTORES: 
@@ -19,7 +19,7 @@ public class Casos {
         
     }//Fin del CONSTRUCTOR.
     
-    public Casos(String lugar, String descripcion, String tipo, ArrayList detectives, String estado){
+    public Casos(String lugar, String descripcion, String tipo, String detectives, String estado){
         this.lugar = lugar; 
         this.descripcion = descripcion;
         this.tipo = tipo;
@@ -46,7 +46,7 @@ public class Casos {
         }//Fin del if que valida el tipo de estado.
     }//Fin del metodo SET TIPO.
     
-    public void setDetective(Object detective){
+    public void setDetective(String detective){
         detectives = detective;
     }//Fin del metodo SET LABORALES.
     
