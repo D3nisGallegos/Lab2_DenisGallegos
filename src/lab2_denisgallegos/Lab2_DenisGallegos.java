@@ -30,7 +30,7 @@ public class Lab2_DenisGallegos {
             System.out.println("7) Listar casos.");
             System.out.println("8) Listar casos resueltos.");
             System.out.println("9) Listar casos  pemdientes. ");
-            System.out.println("Ingrese la opcion. ");
+            System.out.println("Ingrese la opcion: ");
             opcion = lectura.nextInt();
             switch (opcion){
                 case 1:
@@ -129,9 +129,60 @@ public class Lab2_DenisGallegos {
                             }//Fin del for que recorre los casos del detective a borrar.
                         }//Fin del if que valida el nivel del detective.
                     }//Fin del for que recorre la lista de detectives.
-                    
+                    detectives.remove(indice);
                     break;
                     }//Fin del caso 2.
+                case 3:
+                    {
+                    System.out.println(" MODIFICAR DETECTIVES: ");
+                     System.out.println("Lista de detectives: ");
+                    imprimirlista(detectives);
+                    int indice = 0;
+                    boolean v2 = false;
+                    while (v2 == false){
+                        System.out.println("Ingrese el indice del detective a eliminar: ");
+                        indice = lectura.nextInt();
+                        if (indice >= 0 && indice < detectives.size()){
+                            v2 = true;
+                        }else{
+                            System.out.println("Indice no valido.");
+                        }//Fin del if que valida la entrada.
+                    }//Fin del while que reinicia la entrada.
+                    Detectives detectivemodificar = (Detectives) detectives.get(indice);
+                    int n2 = 0;
+                    while (n2 != 1 && n2 != 2 && n2 != 3){
+                        System.out.println("1) Modificar nombre.");
+                        System.out.println("2) Modificar edad.");
+                        System.out.println("3) Modificar nacionalidad.");
+                        System.out.println("4) Modificar tiempo laboral");
+                        System.out.println("5) Modificar nivel.");
+                        System.out.println("Ingrese la opcion: ");
+                        n2 = lectura.nextInt();
+                    }//Fin del while que reinica la entrada.
+                    if (n2 == 1){
+                        System.out.println("Ingrese el nuevo nombre del detective: ");
+                        String nombre = lectura.next();
+                        detectivemodificar.setNombre(nombre);
+                    }else if (n2 == 2){
+                        int edad = 0;
+                        boolean validar = false;
+                        while (validar == false){
+                            System.out.println("Ingrese la nueva edad del detective: (1-100)");
+                            edad = lectura.nextInt();
+                            if (edad > 0 && edad < 100){
+                                validar = true;
+                            }else {
+                                System.out.println("Edad no valida.");
+                            }//Fin del if que valida la entrada.
+                        }//Fin del while que reinicia la entrada.
+                        detectivemodificar.seEdad(edad);
+                    }else if (n2 == 3){
+                        System.out.println("Ingrese la nacionalidad del detective: ");
+                        String nacionalidad = lectura.next();
+                        detectivemodificar.setNacionalidad(nacionalidad);
+                    }//Fin del if que valida el tamanio.
+                    break;
+                    }//Fin del caso 3.
             }//Fin del switch que valida la opcion.
         }//Fin del while que reinicia el programa.
         

@@ -37,7 +37,7 @@ public class Detectives {
         this.edad = edad;
     }//Fin del metodo SET EDAD.
     
-    public void setMedida(String nacionalidad){
+    public void setNacionalidad(String nacionalidad){
         this.nacionalidad = nacionalidad;
     }//Fin del metodo SET NACIONALIDAD.
     
