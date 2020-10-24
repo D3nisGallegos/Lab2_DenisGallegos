@@ -13,7 +13,7 @@ public class Detectives {
     private String nacionalidad; 
     private int laborales;
     private int nivel;
-    private ArrayList casos;
+    private ArrayList <Casos> casos;
     
     //CONSTRUCTORES: 
     public Detectives(){
@@ -49,7 +49,7 @@ public class Detectives {
         this.nivel = nivel;
     }//Fin del metodo SET NIVEL.
     
-    public void setCaso(Object caso){
+    public void setCaso(Casos caso){
         casos.add(caso);
     }//Fin del metodo SET CASO.
     

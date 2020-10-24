@@ -19,7 +19,7 @@ public class Lab2_DenisGallegos {
         ArrayList detectives = new ArrayList();
         ArrayList<Integer> niveles = new ArrayList();
         ArrayList casos = new ArrayList();
-        while (opcion != 5){
+        while (opcion != 10){
             System.out.println("      MENU DE LABORATORIO: ");
             System.out.println("1) Agregar detective. ");
             System.out.println("2) Eliminar detective. ");
@@ -29,7 +29,8 @@ public class Lab2_DenisGallegos {
             System.out.println("6) Modificar caso.");
             System.out.println("7) Listar casos.");
             System.out.println("8) Listar casos resueltos.");
-            System.out.println("9) Listar casos  pemdientes. ");
+            System.out.println("9) Listar casos  pendientes. ");
+            System.out.println("10) Salir.");
             System.out.println("Ingrese la opcion: ");
             opcion = lectura.nextInt();
             switch (opcion){
@@ -265,11 +266,11 @@ public class Lab2_DenisGallegos {
                     if (n3 == 1){
                         estado = "En proceso";
                     }else if (n3 == 2){
-                        tipo = "Resuelto";
+                        estado = "Resuelto";
                     }//Fin del if que valida el estado de caso.
                     Casos caso = new Casos(lugar, descripcion, tipo, detective, estado);
                     casos.add(caso);
-                    asignado.getCasos().add(caso);
+                    //asignado.setCaso(caso);
                     break;
                     }//Fin del caso 5.
                 case 6: 

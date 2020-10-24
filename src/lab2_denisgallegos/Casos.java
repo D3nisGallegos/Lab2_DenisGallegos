@@ -39,9 +39,9 @@ public class Casos {
     public void setTipo(int n){
         if (n == 1){
             tipo = "Homicidio";
-        }else if (n == 2){
-            tipo = "Robo";
         }else if (n == 3){
+            tipo = "Robo";
+        }else if (n == 2){
             tipo = "Secuestro";
         }//Fin del if que valida el tipo de estado.
     }//Fin del metodo SET TIPO.
